@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace asp_net_Project_WSEI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AdminController : Controller
     {
         private readonly IProductRepository _repository;

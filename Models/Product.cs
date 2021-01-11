@@ -6,7 +6,7 @@ namespace asp_net_Project_WSEI.Models
     
     public class Product
     {
-        
+         [Key]
         public int PID { get; set; }
         [Display(Name = "Name")]
         public string ProductName { get; set; }
