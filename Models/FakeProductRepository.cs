@@ -18,7 +18,7 @@ namespace asp_net_Project_WSEI.Models
 
         }
 
-        public void SaveProduct(Product product)
+        public void AddProduct(Product product)
         {
 
             throw new NotImplementedException();

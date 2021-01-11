@@ -12,7 +12,7 @@ namespace asp_net_Project_WSEI.Models
         }
         public IQueryable<Product> Products => _ctx.Products;
 
-        public void SaveProduct(Product product)
+        public void AddProduct(Product product)
         {
             if(product.PID == 0)
             {

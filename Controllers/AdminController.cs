@@ -21,11 +21,11 @@ namespace asp_net_Project_WSEI.Controllers
             View(_repository.Products.FirstOrDefault(p => p.PID == productId));
 
         [HttpPost]
-        public IActionResult SaveProduct(Product product)
+        public IActionResult AddProduct(Product product)
         {
             if (ModelState.IsValid)
             {
-                _repository.SaveProduct(product);
+                _repository.AddProduct(product);
                 TempData["message"] = $"Saved {product.ProductName}.";
                 return RedirectToAction("Index");
             }

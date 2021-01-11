@@ -29,6 +29,7 @@ namespace asp_net_Project_WSEI
             services.AddIdentity<IdentityUser, IdentityRole>()
                                            .AddDefaultTokenProviders()
                                            .AddEntityFrameworkStores<AppDbContext>();
+            services.AddSwaggerGen();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -39,13 +40,23 @@ namespace asp_net_Project_WSEI
                     app.UseDeveloperExceptionPage();
                 }
 
+                app.UseSwagger();
+                app.UseSwaggerUI(endpoint =>
+                {
+                    endpoint.SwaggerEndpoint("/swagger/v1/swagger.json", "ItemShop API");
+                    endpoint.RoutePrefix = "API";
+                });
+
                 app.UseRouting();
-                app.UseHttpsRedirection();
                 app.UseDeveloperExceptionPage();
                 app.UseStatusCodePages();
                 app.UseElapsedTimeMiddleware();
                 app.UseRouting();
+                app.UseAuthentication();
+                app.UseAuthorization();
+
                 app.UseEndpoints(routes => {
+                   
                     routes.MapControllerRoute(
                         name: "default",
                         pattern: "{ controller = Product }/{ action = List }/{id?}"
@@ -55,13 +66,14 @@ namespace asp_net_Project_WSEI
                         pattern: "Product/{category}",
                         defaults: new {
                             controller = "Product",
-                            aciont = "List"
+                            action = "List"
                         });
                     routes.MapControllerRoute(
-                        name: null,
+                        name: "Admin",
                         pattern: "Admin/{action=Index}",
                         defaults: new {
                             controller = "Admin",
+                            action = "Index"
                         });
                 });
                 SeedData.EnsurePopulated(app);

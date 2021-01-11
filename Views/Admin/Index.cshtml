@@ -1,7 +1,7 @@
 @model IEnumerable<Product>
 
     @{
-    ViewBag.Title = "Wszystkie produkty";
+    ViewBag.Title = "Products";
     Layout = "_AdminLayout";
     }
 
@@ -21,7 +21,7 @@
                 <form asp-action="Delete" method="post">
                     <a asp-action="Edit" class="btn btn-sm btn-warning"
                        asp-route-productId="@item.PID">
-                        Edytuj
+                        Edit
                     </a>
                     <input type="hidden" name="PID" value="@item.PID" />
                     <button type="submit" class="btn btn-danger btn-sm">
