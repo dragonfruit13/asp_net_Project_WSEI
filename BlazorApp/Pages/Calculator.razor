@@ -1,0 +1,30 @@
+@page "/calculator"
+
+<h1> Caluclator </h1>
+
+<input type="number" @bind="num1">
+<input type="number" @bind="num2">
+
+<button class="btn btn-primary" @onclick="@(x => AddNumbers(num1,num2))">+</button>
+<button class="btn btn-primary" @onclick="@(x => SubtractNumbers(num1,num2))">+</button>
+
+<p>Result: @result</p>
+
+
+
+
+@code {
+    private int result, num1, num2;
+
+    private void AddNumbers(int num1, int num2)
+    {
+        result = num1 + num2;
+
+    }
+
+    private void SubtractNumbers(int num1, int num2)
+    {
+        result = num1 - num2;
+
+    }
+}
