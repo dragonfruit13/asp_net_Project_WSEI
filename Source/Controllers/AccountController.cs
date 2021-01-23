@@ -31,7 +31,7 @@ namespace asp_net_Project_WSEI.Controllers
             return View(new LoginModel
             {
                 ReturnedURL = returnedURL
-            }) ;
+            });
 
         }
         [HttpPost]

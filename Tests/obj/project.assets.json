@@ -9606,11 +9606,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\asp_net_Project_WSEI_tests.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\asp_net_Project_WSEI_tests.csproj",
       "projectName": "asp_net_Project_WSEI_tests",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\asp_net_Project_WSEI_tests.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\asp_net_Project_WSEI_tests.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\Myrsky18\\asp_net_Project_WSEI\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9627,8 +9627,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\Myrsky18\\asp_net_Project_WSEI\\Source\\asp_net_Project_WSEI.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\Myrsky18\\asp_net_Project_WSEI\\Source\\asp_net_Project_WSEI.csproj"
+            "C:\\Users\\Admin\\Source\\Repos\\Myrsky18\\asp_net_Project_WSEI\\Source\\asp_net_Project_WSEI.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Myrsky18\\asp_net_Project_WSEI\\Source\\asp_net_Project_WSEI.csproj"
             }
           }
         }

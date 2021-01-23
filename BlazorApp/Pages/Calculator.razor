@@ -6,7 +6,7 @@
 <input type="number" @bind="num2">
 
 <button class="btn btn-primary" @onclick="@(() => AddNumbers(num1,num2))">+</button>
-<button class="btn btn-primary" @onclick="@(() => SubtractNumbers(num1,num2))">-</button>
+<button class="btn btn-primary" @onclick="(() => SubtractNumbers(num1,num2))">-</button>
 
 <p>Result: @result</p>
 

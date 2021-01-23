@@ -18,7 +18,7 @@
             <td class="text-right">@item.PID</td>
             <td>@item.ProductName</td>
             <td class="text-center">
-                <form asp-action="Delete" method="post">
+                <form asp-action="Remove" method="post">
                     <a asp-action="Edit" class="btn btn-sm btn-warning"
                        asp-route-productId="@item.PID">
                         Edit

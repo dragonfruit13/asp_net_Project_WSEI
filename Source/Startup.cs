@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using asp_net_Project_WSEI.Extensions;
+using asp_net_Project_WSEI.Hubs;
 
 namespace asp_net_Project_WSEI
 {
@@ -21,6 +22,7 @@ namespace asp_net_Project_WSEI
 
         public void ConfigureServices(IServiceCollection services) {
 
+            services.AddSignalR();
             services.AddRazorPages();
             services.AddMvc();
             services.AddTransient<IProductRepository, EFProductRepository>();
@@ -48,19 +50,20 @@ namespace asp_net_Project_WSEI
                     endpoint.RoutePrefix = "API";
                 });
 
-                app.UseRouting();
+                app.UseStaticFiles();
                 app.UseDeveloperExceptionPage();
                 app.UseStatusCodePages();
                 app.UseElapsedTimeMiddleware();
                 app.UseRouting();
+
                 app.UseAuthentication();
                 app.UseAuthorization();
 
                 app.UseEndpoints(routes => {
-                   
+
                     routes.MapControllerRoute(
                         name: "default",
-                        pattern: "{ controller = Product }/{ action = List }/{id?}"
+                        pattern: "{controller=Product}/{action=List}/{id?}"
                         );
                     routes.MapControllerRoute(
                         name: null,
@@ -76,6 +79,9 @@ namespace asp_net_Project_WSEI
                             controller = "Admin",
                             action = "Index"
                         });
+
+                    routes.MapHub<ChatHub>("/chatHub");
+                    routes.MapHub<CountUser>("/userCounter");
                 });
                 SeedData.EnsurePopulated(app);
             }
