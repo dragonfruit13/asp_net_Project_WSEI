@@ -1,4 +1,4 @@
-@model Product
+@model asp_net_Project_WSEI.Models.Product
 
 @{
     ViewBag.Title = "Edit";
@@ -8,14 +8,14 @@
 <form asp-action="Save" method="post">
     <input type="hidden" asp-for="PID" />
     <div class="form-group">
-        <label asp-for="ProductName">Produkt</label>
+        <label asp-for="ProductName">Product</label>
         <div><span asp-validation-for="ProductName" class="text-danger"></span></div>
         <input asp-for="ProductName" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="ProductDescription">Description</label>
         <div><span asp-validation-for="ProductDescription" class="text-danger"></span></div>
-        <textarea asp-for="ProductDescription" class="form-control" />
+        <input asp-for="ProductDescription" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="ProductCategory">Category</label>

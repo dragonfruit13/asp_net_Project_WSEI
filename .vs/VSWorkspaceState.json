@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Source"
+    "\\Source",
+    "\\Source\\Views",
+    "\\Source\\Views\\Admin"
   ],
   "SelectedNode": "\\Source\\asp_net_Project_WSEI.sln",
   "PreviewInSolutionExplorer": false

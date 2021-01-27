@@ -21,7 +21,7 @@ namespace asp_net_Project_WSEI.Controllers
             View(_repository.Products.FirstOrDefault(p => p.PID == productId));
 
         [HttpPost]
-        public IActionResult AddProduct(Product product)
+        public IActionResult Save(Product product)
         {
             if (ModelState.IsValid)
             {
@@ -39,12 +39,14 @@ namespace asp_net_Project_WSEI.Controllers
         public ViewResult Create() => View("Edit", new Product());
 
         [HttpPost]
-        public IActionResult RemoveProduct(int productId)
+        public IActionResult Remove(int productId)
         {
             Product removedProduct = _repository.RemoveProduct(productId);
             if (removedProduct != null)
                 TempData["message"] = $"Removed {removedProduct.ProductName}.";
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            
+            
         }
     }
 }

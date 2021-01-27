@@ -12,16 +12,7 @@ namespace asp_net_Project_WSEI.Models
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-            
-            modelBuilder.Ignore<IdentityUserLogin<string>>();
-            modelBuilder.Ignore<IdentityUserRole<string>>();
-            modelBuilder.Ignore<IdentityUserClaim<string>>();
-            modelBuilder.Ignore<IdentityUserToken<string>>();
-            modelBuilder.Ignore<IdentityUser<string>>();
-        }
+        
 
         public DbSet<Product> Products { get; set; }
     }
