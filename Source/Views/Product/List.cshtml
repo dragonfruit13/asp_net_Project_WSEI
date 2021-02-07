@@ -2,7 +2,7 @@
 @model IEnumerable<Product>
     @foreach (var p in Model)
 {
-    <div>
+    <div id="product" class="hide">
         <h3>@p.ProductName</h3>
         @p.ProductDescription
         <h4>@p.ProductPrice.ToString("c")</h4>
@@ -10,6 +10,6 @@
 }
 
 <div class="row">
-    <p class="col-2" id="countedUser"> Currently on the category page there is: </p>
+    <p class="col-2" id="productUserCounter"> Currently on the category page there is: </p>
 </div>
 

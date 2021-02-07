@@ -84,7 +84,8 @@ namespace asp_net_Project_WSEI
 
                     routes.MapHub<ChatHub>("/chathub");
                     routes.MapHub<CountUser>("/counterHub");
-                    routes.MapHub<productCounter>("/category");
+                    routes.MapHub<ProductCounter>("/category");
+                    
                 });
                 SeedData.EnsurePopulated(app);
             }
