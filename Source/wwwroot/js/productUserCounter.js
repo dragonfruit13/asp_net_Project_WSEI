@@ -7,8 +7,9 @@ let product = document.getElementById("product")
 connection.on("updateUserCounter", (userCounter) => {
 	let textMessage = document.getElementById("productUserCounter");
 	let countUsers = document.createTextNode(userCounter);
-	textMessage.replaceWith(countUsers)
+	textMessage.appendChild(countUsers)
 	console.log(countUsers)
+	
 
 });
 
