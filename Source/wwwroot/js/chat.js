@@ -14,7 +14,6 @@ connection.on("ReceiveMessage", function (user, message) {
 });
 
 connection.start().then(function () {
-    
     document.getElementById("sendButton").disabled = false;
 }).catch(function (err) {
     return console.error(err.toString());

@@ -13,14 +13,14 @@ namespace asp_net_Project_WSEI.Hubs
         public override Task OnConnectedAsync()
         {
             userCount++;
-            Clients.All.SendAsync("updateCount", userCount);
+            Clients.All.SendAsync("updateCounter", userCount);
             return base.OnConnectedAsync();
         }
 
         public override Task OnDisconnectedAsync(Exception exception)
         {
             userCount--;
-            Clients.All.SendAsync("updateCount", userCount);
+            Clients.All.SendAsync("updateCounter", userCount);
             return base.OnDisconnectedAsync(exception);
         }
     }

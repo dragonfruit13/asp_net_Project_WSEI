@@ -22,7 +22,9 @@ namespace asp_net_Project_WSEI
 
         public void ConfigureServices(IServiceCollection services) {
 
-            services.AddSignalR();
+            services.AddSignalR(options => {
+                options.EnableDetailedErrors = true;
+            });
             services.AddRazorPages();
             services.AddMvc();
             services.AddTransient<IProductRepository, EFProductRepository>();
@@ -80,8 +82,9 @@ namespace asp_net_Project_WSEI
                             action = "Index"
                         });
 
-                    routes.MapHub<ChatHub>("/chatHub");
+                    routes.MapHub<ChatHub>("/chathub");
                     routes.MapHub<CountUser>("/counterHub");
+                    routes.MapHub<productCounter>("/category");
                 });
                 SeedData.EnsurePopulated(app);
             }

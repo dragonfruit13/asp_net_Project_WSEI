@@ -1,11 +1,14 @@
-﻿"use strict";
+﻿
+"use strict";
 
 var connection = new signalR.HubConnectionBuilder().withUrl("counterHub").build();
 
-connection.on("updateCount", (userCount) => {
-	let textMessage = document.getElementById("userCount");
-	let count = document.createTextNode(userCount);
-	textMessage.appendChild(count + " user")
+connection.on("updateCounter", (userCount) => {
+	let textMessage = document.getElementById("counter");
+	let count = document.createTextNode(`${userCount} users`);
+	textMessage.appendChild(count)
 });
 
-connection.start();
+connection.start()
+	
+

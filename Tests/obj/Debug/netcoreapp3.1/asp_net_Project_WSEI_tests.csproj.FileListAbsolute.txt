@@ -157,3 +157,5 @@ C:\Users\Admin\source\repos\Myrsky18\asp_net_Project_WSEI\Tests\obj\Debug\netcor
 C:\Users\Admin\source\repos\Myrsky18\asp_net_Project_WSEI\Tests\obj\Debug\netcoreapp3.1\asp_net_Project_WSEI_tests.dll
 C:\Users\Admin\source\repos\Myrsky18\asp_net_Project_WSEI\Tests\obj\Debug\netcoreapp3.1\asp_net_Project_WSEI_tests.pdb
 C:\Users\Admin\source\repos\Myrsky18\asp_net_Project_WSEI\Tests\obj\Debug\netcoreapp3.1\asp_net_Project_WSEI_tests.genruntimeconfig.cache
+C:\Users\Admin\Source\Repos\Myrsky18\asp_net_Project_WSEI\Tests\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
+C:\Users\Admin\Source\Repos\Myrsky18\asp_net_Project_WSEI\Tests\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
